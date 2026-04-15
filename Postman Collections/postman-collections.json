@@ -126,7 +126,7 @@
 									"// Parsing the response returned by the request.\r",
 									"var jsonData = pm.response.json();\r",
 									"\r",
-									"// Extracting the token from the response and setting it as a global variable.\r",
+									"// Extracting the token from the response and setting it as an environement variable.\r",
 									"pm.environment.set(\"authorization\", jsonData.authorization);"
 								],
 								"type": "text/javascript",
@@ -300,13 +300,47 @@
 				},
 				{
 					"name": "Cadastrar carrinho",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "523a12d0-809d-4ba5-80ea-561f91e67bc0",
+								"exec": [
+									"// Parsing the response returned by the request.\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"// Extracting the token from the response and setting it as an environement variable.\r",
+									"pm.environment.set(\"idCart\", jsonData._id);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "f5e39a16-bb32-4d47-9e9e-45520edfa413",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"produtos\": [\r\n    {\r\n      \"idProduto\": \"BeeJh5lz3k6kSIzA\",\r\n      \"quantidade\": 1\r\n    },\r\n    {\r\n      \"idProduto\": \"YaeJ455lz3k6kSIzA\",\r\n      \"quantidade\": 3\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}/carrinhos"
 					},
 					"response": []
 				},
