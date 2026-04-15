@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Usuarios",
+			"name": "Usuários",
 			"item": [
 				{
 					"name": "Consulta de usuários por ID",
@@ -97,14 +97,15 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Excluir usuário",
 					"id": "5367fe48-9ec0-4d7e-a265-8310f46df68a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "DELETE",
+						"header": [],
+						"url": "{{BASE_URL}}/usuarios/{{idNewUser}}"
 					},
 					"response": []
 				}
@@ -286,8 +287,56 @@
 			"name": "Carrinho",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "Listagem de carrinhos",
 					"id": "2413fa26-89dd-4258-96ee-b796858a3bff",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar carrinho",
+					"id": "f5e39a16-bb32-4d47-9e9e-45520edfa413",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Listagem de carrinhos Copy",
+					"id": "fd3cdc06-4598-4d9d-a5e4-68a56ef2c548",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Listagem de carrinhos Copy",
+					"id": "ff294e37-5a54-4ce8-a911-e6ecacb3cbe0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Listagem de carrinhos Copy",
+					"id": "faea2981-1a27-4fa3-956f-3a3695fe0ac1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
