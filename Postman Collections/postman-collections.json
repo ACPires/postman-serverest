@@ -17,15 +17,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": "https://serverest.dev/usuarios/{{idNewUser}}"
 					},
 					"response": []
@@ -36,16 +27,17 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "3e985530-ceaa-4954-8ca4-2c5ff38d03b7",
+								"id": "89790498-b83a-4616-ae9e-0c7ac63f3a35",
 								"exec": [
 									"// Parsing the response returned by the request.\r",
 									"var jsonData = pm.response.json();\r",
 									"\r",
 									"// Extracting the token from the response and setting it as an environment variable.\r",
-									"pm.globals.set(\"idNewUser\", jsonData._id);"
+									"pm.environment.set(\"idNewUser\", jsonData._id);"
 								],
 								"type": "text/javascript",
-								"packages": {}
+								"packages": {},
+								"requests": {}
 							}
 						}
 					],
