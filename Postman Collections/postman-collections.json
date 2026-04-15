@@ -17,7 +17,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{baseUrl}}/usuarios/{{idNewUser}}"
+						"url": "{{BASE_URL}}/usuarios/{{idNewUser}}"
 					},
 					"response": []
 				},
@@ -30,7 +30,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{baseUrl}}/usuarios"
+						"url": "{{BASE_URL}}/usuarios"
 					},
 					"response": []
 				},
@@ -70,7 +70,7 @@
 								}
 							}
 						},
-						"url": "{{baseUrl}}/usuarios"
+						"url": "{{BASE_URL}}/usuarios"
 					},
 					"response": []
 				}
@@ -116,7 +116,7 @@
 								}
 							}
 						},
-						"url": "{{baseUrl}}/login"
+						"url": "{{BASE_URL}}/login"
 					},
 					"response": []
 				}
@@ -135,7 +135,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{baseUrl}}/produtos"
+						"url": "{{BASE_URL}}/produtos"
 					},
 					"response": []
 				},
@@ -181,7 +181,7 @@
 								}
 							}
 						},
-						"url": "{{baseUrl}}/produtos"
+						"url": "{{BASE_URL}}/produtos"
 					},
 					"response": []
 				}
