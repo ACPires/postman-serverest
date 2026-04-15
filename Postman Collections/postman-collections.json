@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "a8f7aebe-1fd7-49bf-a358-a274f6ab372a",
+		"name": "Serverest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Consulta de usuários por ID",
+					"id": "208bf9b2-970b-421d-84b0-678ed4090bab",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://serverest.dev/usuarios/{{idNewUser}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastro de usuário",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3e985530-ceaa-4954-8ca4-2c5ff38d03b7",
+								"exec": [
+									"// Parsing the response returned by the request.\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"// Extracting the token from the response and setting it as an environment variable.\r",
+									"pm.globals.set(\"idNewUser\", jsonData._id);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "3126ea98-e514-4102-ab6f-57e6bf8c80fd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": {{nome}},\r\n    \"email\": {{email}},\r\n    \"password\": {{password}},\r\n    \"administrador\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://serverest.dev/usuarios"
+					},
+					"response": []
+				}
+			],
+			"id": "ed719e31-bf36-466e-a458-c44ee580bcfd"
+		}
+	]
+}
