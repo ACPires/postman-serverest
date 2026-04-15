@@ -141,13 +141,47 @@
 				},
 				{
 					"name": "Cadastrar produtos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d37be246-8307-4e13-8d5b-d6a04f3f0d04",
+								"exec": [
+									"// Parsing the response returned by the request.\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"// Extracting the token from the response and setting it as a global variable.\r",
+									"pm.environment.set(\"idNewProduct\", jsonData._id);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "c8d8a256-4824-484d-a9ef-83251a1b237d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Monitor LG 21\\\"\",\r\n  \"preco\": 470,\r\n  \"descricao\": \"Monitor\",\r\n  \"quantidade\": 381\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/produtos"
 					},
 					"response": []
 				}
