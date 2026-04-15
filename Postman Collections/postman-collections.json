@@ -17,7 +17,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "https://serverest.dev/usuarios/{{idNewUser}}"
+						"url": "{{baseUrl}}/usuarios/{{idNewUser}}"
 					},
 					"response": []
 				},
@@ -69,6 +69,24 @@
 			"item": [
 				{
 					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "46d25dc7-d607-4c9d-861e-da1e25611259",
+								"exec": [
+									"// Parsing the response returned by the request.\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"// Extracting the token from the response and setting it as a global variable.\r",
+									"pm.globals.set(\"authorization\", jsonData.authorization);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
 					"id": "90c1e41e-be67-4cd5-a5f7-6810fa4f815b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -76,6 +94,15 @@
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": {{email}},\r\n    \"password\": {{password}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": "{{baseUrl}}/login"
 					},
 					"response": []
