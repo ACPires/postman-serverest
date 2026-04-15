@@ -140,6 +140,19 @@
 					"response": []
 				},
 				{
+					"name": "Listagem de produtos por ID",
+					"id": "5c89c343-f611-4984-8656-bec558a14225",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BASE_URL}}/produtos/{{idNewProduct}}"
+					},
+					"response": []
+				},
+				{
 					"name": "Cadastrar produtos",
 					"event": [
 						{
@@ -202,7 +215,12 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"nome\": \"Monitor LG\",\r\n  \"preco\": 470,\r\n  \"descricao\": \"Screen\",\r\n  \"quantidade\": 381\r\n}"
+							"raw": "{\r\n    \"nome\": \"Monitor LG\",\r\n    \"preco\": 470,\r\n    \"descricao\": \"Screen\",\r\n    \"quantidade\": 381\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": "{{BASE_URL}}/produtos/{{idNewProduct}}"
 					},
@@ -215,8 +233,15 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"url": "{{BASE_URL}}/produtos/{{idNewProduct}}"
 					},
 					"response": []
 				}
