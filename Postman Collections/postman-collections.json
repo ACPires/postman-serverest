@@ -73,6 +73,40 @@
 						"url": "{{BASE_URL}}/usuarios"
 					},
 					"response": []
+				},
+				{
+					"name": "Editar usuário",
+					"id": "b524e236-e51b-4e05-8c14-a77d15048e44",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": {{nome}},\r\n    \"email\": {{email}},\r\n    \"password\": {{password}},\r\n    \"administrador\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}/usuarios/{{idNewUser}}"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "5367fe48-9ec0-4d7e-a265-8310f46df68a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "ed719e31-bf36-466e-a458-c44ee580bcfd"
@@ -227,7 +261,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Excluir produto",
 					"id": "b65e1f13-05a2-4c3b-99c7-71cf79df1d04",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -247,6 +281,24 @@
 				}
 			],
 			"id": "d00ff1d7-6e19-4dee-9da4-6b5afe8d69b9"
+		},
+		{
+			"name": "Carrinho",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "2413fa26-89dd-4258-96ee-b796858a3bff",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "13570cb2-a4f1-4d19-90ae-9c96e72c32dc"
 		}
 	]
 }
