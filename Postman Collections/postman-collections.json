@@ -184,6 +184,30 @@
 						"url": "{{BASE_URL}}/produtos"
 					},
 					"response": []
+				},
+				{
+					"name": "Editar produto",
+					"id": "291652ef-d964-4b4f-9b80-3fb7c02d5202",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "b65e1f13-05a2-4c3b-99c7-71cf79df1d04",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "d00ff1d7-6e19-4dee-9da4-6b5afe8d69b9"
