@@ -192,8 +192,19 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Monitor LG\",\r\n  \"preco\": 470,\r\n  \"descricao\": \"Screen\",\r\n  \"quantidade\": 381\r\n}"
+						},
+						"url": "{{BASE_URL}}/produtos/{{idNewProduct}}"
 					},
 					"response": []
 				},
