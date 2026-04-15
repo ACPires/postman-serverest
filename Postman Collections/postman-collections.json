@@ -22,6 +22,19 @@
 					"response": []
 				},
 				{
+					"name": "Listagem de usuários",
+					"id": "881a5939-2779-4680-a3c4-c9b0fef16a1e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/usuarios"
+					},
+					"response": []
+				},
+				{
 					"name": "Cadastro de usuário",
 					"event": [
 						{
@@ -92,7 +105,7 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
@@ -109,6 +122,37 @@
 				}
 			],
 			"id": "484140d3-816c-4b0b-9788-dd7324fd9703"
+		},
+		{
+			"name": "Produtos",
+			"item": [
+				{
+					"name": "Listagem de produtos",
+					"id": "b5cb473d-c905-4f5e-b82a-ff8671d015b0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/produtos"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar produtos",
+					"id": "c8d8a256-4824-484d-a9ef-83251a1b237d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "d00ff1d7-6e19-4dee-9da4-6b5afe8d69b9"
 		}
 	]
 }
