@@ -57,12 +57,31 @@
 								}
 							}
 						},
-						"url": "https://serverest.dev/usuarios"
+						"url": "{{baseUrl}}/usuarios"
 					},
 					"response": []
 				}
 			],
 			"id": "ed719e31-bf36-466e-a458-c44ee580bcfd"
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"id": "90c1e41e-be67-4cd5-a5f7-6810fa4f815b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/login"
+					},
+					"response": []
+				}
+			],
+			"id": "484140d3-816c-4b0b-9788-dd7324fd9703"
 		}
 	]
 }
