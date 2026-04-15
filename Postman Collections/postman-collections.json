@@ -92,7 +92,7 @@
 									"var jsonData = pm.response.json();\r",
 									"\r",
 									"// Extracting the token from the response and setting it as a global variable.\r",
-									"pm.globals.set(\"authorization\", jsonData.authorization);"
+									"pm.environment.set(\"authorization\", jsonData.authorization);"
 								],
 								"type": "text/javascript",
 								"packages": {},
