@@ -345,38 +345,53 @@
 					"response": []
 				},
 				{
-					"name": "Listagem de carrinhos Copy",
+					"name": "Listagem de carrinhos por ID",
 					"id": "fd3cdc06-4598-4d9d-a5e4-68a56ef2c548",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{BASE_URL}}/carrinhos/{{idCart}}"
 					},
 					"response": []
 				},
 				{
-					"name": "Listagem de carrinhos Copy",
+					"name": "Concluir compra",
 					"id": "ff294e37-5a54-4ce8-a911-e6ecacb3cbe0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"url": "{{BASE_URL}}/carrinhos/concluir-compra"
 					},
 					"response": []
 				},
 				{
-					"name": "Listagem de carrinhos Copy",
+					"name": "Cancelar compra",
 					"id": "faea2981-1a27-4fa3-956f-3a3695fe0ac1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}",
+								"type": "text"
+							}
+						],
+						"url": "{{BASE_URL}}/carrinhos/cancelar-compra"
 					},
 					"response": []
 				}
